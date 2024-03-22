@@ -3,7 +3,6 @@ package models;
 import com.opencsv.bean.CsvBindByPosition;
 import lombok.*;
 
-
 @Getter @Setter
 public class Coordinates {
     @CsvBindByPosition(position = 2, required = true)

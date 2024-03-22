@@ -2,13 +2,9 @@ package models;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-
-import com.opencsv.bean.AbstractBeanField;
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvCustomBindByPosition;
 import com.opencsv.bean.CsvRecurse;
-import com.opencsv.exceptions.CsvConstraintViolationException;
-import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import lombok.*;
 
 @Setter

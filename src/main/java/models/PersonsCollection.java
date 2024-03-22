@@ -1,9 +1,7 @@
 package models;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
-
 import static checkers.PersonChecker.checkPerson;
 
 public class PersonsCollection {

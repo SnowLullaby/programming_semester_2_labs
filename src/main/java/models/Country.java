@@ -1,5 +1,8 @@
 package models;
 
+import lombok.Getter;
+
+@Getter
 public enum Country {
     USA ("USA"),
     VATICAN ("Vatican"),
@@ -11,10 +14,6 @@ public enum Country {
 
     Country(String title) {
         this.title = title;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     @Override

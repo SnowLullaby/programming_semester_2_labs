@@ -1,5 +1,8 @@
 package models;
 
+import lombok.Getter;
+
+@Getter
 public enum Color {
     RED ("Red"),
     BLUE ("Blue"),
@@ -8,9 +11,5 @@ public enum Color {
 
     Color(String title) {
         this.title = title;
-    }
-
-    public String getTitle() {
-        return title;
     }
 }

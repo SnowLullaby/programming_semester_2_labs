@@ -1,9 +1,7 @@
 package parsers;
 
 import models.Person;
-
 import com.opencsv.bean.CsvToBeanBuilder;
-
 import java.io.InputStreamReader;
 import java.util.List;
 

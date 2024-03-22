@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="The &quot;Person&quot; class and collection singleton has been implemented.">
-      <change afterPath="$PROJECT_DIR$/.idea/tableDiffSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/checkers/CoordinatesChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/checkers/LocationChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/checkers/PersonChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/ZoneDateTimeConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parsers/CsvParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parsers/SaveLoaderCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/SaveLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/SaveLoader.java" afterDir="false" />
-    </list>
+    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="Parsing of CSv files and collection filling were fully completed, checkers for Person parameters were added, OpenCSV and Lombok annotations were added." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +112,7 @@
       <workItem from="1710585155698" duration="6435000" />
       <workItem from="1710850040940" duration="7537000" />
       <workItem from="1711097358742" duration="13733000" />
-      <workItem from="1711112861871" duration="11518000" />
+      <workItem from="1711112861871" duration="11755000" />
     </task>
     <task id="LOCAL-00001" summary="The &quot;Person&quot; class and collection singleton has been implemented.">
       <option name="closed" value="true" />
@@ -141,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710514253249</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Parsing of CSv files and collection filling were fully completed, checkers for Person parameters were added, OpenCSV and Lombok annotations were added.">
+      <option name="closed" value="true" />
+      <created>1711129747636</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711129747636</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +161,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="The &quot;Person&quot; class and collection singleton has been implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="The &quot;Person&quot; class and collection singleton has been implemented." />
+    <MESSAGE value="Parsing of CSv files and collection filling were fully completed, checkers for Person parameters were added, OpenCSV and Lombok annotations were added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Parsing of CSv files and collection filling were fully completed, checkers for Person parameters were added, OpenCSV and Lombok annotations were added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
