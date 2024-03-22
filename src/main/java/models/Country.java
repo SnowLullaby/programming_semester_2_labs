@@ -4,8 +4,8 @@ public enum Country {
     USA ("USA"),
     VATICAN ("Vatican"),
     ITALY ("Italy"),
-    NORTH_KOREA ("North Korea"),
-    JAPAN ("Japan");
+    JAPAN ("Japan"),
+    NORTH_KOREA("North_Korea");
 
     private final String title;
 

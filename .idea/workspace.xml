@@ -4,25 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/SaveLoader.java" afterDir="false" />
+    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="The &quot;Person&quot; class and collection singleton has been implemented.">
+      <change afterPath="$PROJECT_DIR$/.idea/tableDiffSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/checkers/CoordinatesChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/checkers/LocationChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/checkers/PersonChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/ZoneDateTimeConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parsers/CsvParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parsers/SaveLoaderCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/SaveLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/SaveLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +34,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="semester_2_lab" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -43,6 +60,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -55,20 +75,38 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.semester_2_lab [:Main.main()].executor": "Run",
     "Gradle.semester_2_lab.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "database.data.extractors.current.export.id": "CSV-Groovy.csv.groovy",
+    "database.data.extractors.current.id": "CSV-Groovy.csv.groovy",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/ifmo/PRGRM/lab_5.2/semester_2_lab/opencsv-5.9.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/ifmo/PRGRM/lab_5.2/semester_2_lab/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ifmo\PRGRM\lab_5.2\semester_2_lab" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -87,8 +125,23 @@
       <workItem from="1710410262622" duration="548000" />
       <workItem from="1710414816577" duration="4935000" />
       <workItem from="1710443253216" duration="1798000" />
-      <workItem from="1710486461530" duration="11213000" />
+      <workItem from="1710486461530" duration="19190000" />
+      <workItem from="1710523444283" duration="10493000" />
+      <workItem from="1710579730044" duration="5229000" />
+      <workItem from="1710585155698" duration="6435000" />
+      <workItem from="1710850040940" duration="7537000" />
+      <workItem from="1711097358742" duration="13733000" />
+      <workItem from="1711112861871" duration="11518000" />
     </task>
+    <task id="LOCAL-00001" summary="The &quot;Person&quot; class and collection singleton has been implemented.">
+      <option name="closed" value="true" />
+      <created>1710514253248</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710514253249</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +169,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="The &quot;Person&quot; class and collection singleton has been implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="The &quot;Person&quot; class and collection singleton has been implemented." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

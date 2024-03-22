@@ -4,12 +4,13 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static checkers.PersonChecker.checkPerson;
+
 public class PersonsCollection {
     private static final PersonsCollection instance = new PersonsCollection();
-    private final ZonedDateTime creationTime = ZonedDateTime.now();
     private SaveLoader saveLoad;
     private LinkedHashMap<Long, Person> collection;
-    private Long maxID;
+    private Long maxID = 0L;
 
     public static PersonsCollection getInstance() {
         if (instance.collection == null) throw new RuntimeException("Collection not initialized");
@@ -22,9 +23,17 @@ public class PersonsCollection {
 
     private static void fillingInstance(SaveLoader saveLoad) {
         instance.saveLoad = saveLoad;
-        var collAndID = instance.saveLoad.parse();
-        instance.maxID = collAndID.getKey();
-        instance.collection = collAndID.getValue();
+        var unchecked = instance.saveLoad.parse();
+        instance.collection = new LinkedHashMap<>();
+
+        for(Person person: unchecked) {
+           if (checkPerson(person)) {
+               instance.collection.put(person.getId(), person);
+               if(instance.maxID < person.getId())
+                   instance.maxID = person.getId();
+           }
+        }
+
         instance.defaultSortByID();
     }
 
@@ -37,6 +46,21 @@ public class PersonsCollection {
         collection.putAll(sortedMap);
     }
 
+    public void descendingSortByID() {
+        LinkedHashMap<Long, Person> sortedMap = collection.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey(new ItemLocationComparatorDescending())) // Сортировка записей по значению с использованием компаратора для сравнения в обратном порядке
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
+        // Заменяем существующую коллекцию на отсортированную
+        collection.clear();
+        collection.putAll(sortedMap);
+    }
+    static class ItemLocationComparatorDescending implements Comparator<Long> {
+        @Override
+        public int compare(Long id1, Long id2) {
+            return id2.compareTo(id1);
+        }
+    }
 
     @Override
     public String toString(){

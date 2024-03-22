@@ -3,48 +3,57 @@ package models;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
+import com.opencsv.bean.AbstractBeanField;
+import com.opencsv.bean.CsvBindByPosition;
+import com.opencsv.bean.CsvCustomBindByPosition;
+import com.opencsv.bean.CsvRecurse;
+import com.opencsv.exceptions.CsvConstraintViolationException;
+import com.opencsv.exceptions.CsvDataTypeMismatchException;
+import lombok.*;
+
+@Setter
 public class Person {
+    @CsvBindByPosition(position = 0, required = true)
+    @Getter
     private long id; // >0 unique auto-generated
+
+    @CsvBindByPosition(position = 1, required = true)
+    @Getter
     private String name; //not null not ''
+
+    @CsvRecurse
+    @Getter
     private Coordinates coordinates; //not null
+
+    @CsvCustomBindByPosition(position = 4, required = true,  converter = ZoneDateTimeConverter.class)
     private ZonedDateTime creationDate; //not null auto-generated
+
+    @CsvBindByPosition(position = 5, required = true)
+    @Getter
     private Integer height; //not null >0
+
+    @CsvBindByPosition(position = 6, required = true)
+    @Getter
     private Float weight; //not null >0
+
+    @CsvBindByPosition(position = 7, required = true)
+    @Getter
     private Color eyeColor; //not null
+
+    @CsvBindByPosition(position = 8, required = true)
+    @Getter
     private Country nationality; //not null
+
+    @CsvRecurse
+    @Getter
     private Location location; //not null
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * Set creation date from string, used in AddCommand, AddIfMinCommand and UpdateCommand
-     * @param date - creation date as String
-     */
-    public void setCreationDate(String date) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy HH:mm:ss z");
-        creationDate = ZonedDateTime.parse(date, formatter);
-    }
 
     /**
      * Convert creation date to string
      * @return creation date as String
      */
     public String getCreationDate() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy HH:mm:ss z");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss X");
         return formatter.format(creationDate);
     }
 
@@ -56,48 +65,10 @@ public class Person {
         creationDate = ZonedDateTime.now();
     }
 
-    public Integer getHeight() {
-        return height;
-    }
-
-    public void setHeight(Integer height) {
-        this.height = height;
-    }
-
-    public Float getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Float weight) {
-        this.weight = weight;
-    }
-
-    public Color getEyeColor() {
-        return eyeColor;
-    }
-
-    public void setEyeColor(Color eyeColor) {
-        this.eyeColor = eyeColor;
-    }
-
-    public Country getNationality() {
-        return nationality;
-    }
-
-    public void setNationality(Country nationality) {
-        this.nationality = nationality;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
     @Override
     public String toString(){
         return ("[" + id + "; " + name + "; " + coordinates  + "; " + getCreationDate() + "; " +
                 height + "; " + weight + "; " + eyeColor + " " + nationality + " " + location + "]");
     }
+
 }
