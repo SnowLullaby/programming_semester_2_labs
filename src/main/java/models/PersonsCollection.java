@@ -1,5 +1,7 @@
 package models;
 
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 import static checkers.PersonChecker.checkPerson;
@@ -7,6 +9,7 @@ import static checkers.PersonChecker.checkPerson;
 public class PersonsCollection {
     private static final PersonsCollection instance = new PersonsCollection();
     private SaveLoader saveLoad;
+    private ZonedDateTime creationTime;
     private LinkedHashMap<Long, Person> collection;
     private Long maxID = 0L;
 
@@ -23,7 +26,6 @@ public class PersonsCollection {
         instance.saveLoad = saveLoad;
         var unchecked = instance.saveLoad.parse();
         instance.collection = new LinkedHashMap<>();
-
         for(Person person: unchecked) {
            if (checkPerson(person)) {
                instance.collection.put(person.getId(), person);
@@ -33,26 +35,45 @@ public class PersonsCollection {
         }
 
         instance.defaultSortByID();
+        instance.setCreationTimeAsNow();
     }
 
     public void defaultSortByID() {
-        LinkedHashMap<Long, Person> sortedMap = collection.entrySet().stream()
+        LinkedHashMap<Long, Person> sortedMap = instance.collection.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey()).collect(Collectors.
                         toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
 
-        collection.clear();
-        collection.putAll(sortedMap);
+        instance.collection.clear();
+        instance.collection.putAll(sortedMap);
     }
 
     public void descendingSortByID() {
-        LinkedHashMap<Long, Person> sortedMap = collection.entrySet().stream()
+        LinkedHashMap<Long, Person> sortedMap = instance.collection.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey(new ItemLocationComparatorDescending())) // Сортировка записей по значению с использованием компаратора для сравнения в обратном порядке
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
 
         // Заменяем существующую коллекцию на отсортированную
-        collection.clear();
-        collection.putAll(sortedMap);
+        instance.collection.clear();
+        instance.collection.putAll(sortedMap);
     }
+
+    public String getCreationTime() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss X");
+        return formatter.format(instance.creationTime);
+    }
+
+    public void setCreationTimeAsNow() {
+        instance.creationTime = ZonedDateTime.now();
+    }
+
+    public int getSize() {
+        return instance.collection.size();
+    }
+
+    public void removeAll() {
+        instance.collection.clear();
+    }
+
     static class ItemLocationComparatorDescending implements Comparator<Long> {
         @Override
         public int compare(Long id1, Long id2) {

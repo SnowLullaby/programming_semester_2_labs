@@ -1,3 +1,4 @@
+import commandService.CommandService;
 import parsers.SaveLoaderCSV;
 import models.*;
 public class Main {
@@ -10,12 +11,12 @@ public class Main {
         initFileName(System.getenv("lab")); //sysdm.cpl
         SaveLoader saveLoad = new SaveLoaderCSV(fileName);
         PersonsCollection.initInstance(saveLoad);
+        CommandService.initInstance();
+        var commandService = CommandService.getInstance();
 
-        //var commandService = CommandService.getInstance();
-
-        /**while (true) {
+        while (true) {
             commandService.execute();
-        }**/
+        }
     }
 
     private static void initFileName (String fileName){

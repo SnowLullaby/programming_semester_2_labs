@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="Parsing of CSv files and collection filling were fully completed, checkers for Person parameters were added, OpenCSV and Lombok annotations were added." />
+    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="Add commands execution and some commands. Add some custom errors.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/commandService/CommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/AllCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/CommandDescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/PrintAscendingCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/PrintDescendingCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/errors/NoCommandError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/errors/NoParamsError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collection.csv" beforeDir="false" afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +61,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="sortByName" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -54,35 +73,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.semester_2_lab [:Main.main()].executor": "Run",
-    "Gradle.semester_2_lab.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "database.data.extractors.current.export.id": "CSV-Groovy.csv.groovy",
-    "database.data.extractors.current.id": "CSV-Groovy.csv.groovy",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/ifmo/PRGRM/lab_5.2/semester_2_lab/opencsv-5.9.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/ifmo/PRGRM/lab_5.2/semester_2_lab/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.semester_2_lab [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;CSV-Groovy.csv.groovy&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;CSV-Groovy.csv.groovy&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ifmo/PRGRM/lab_5.2/semester_2_lab/opencsv-5.9.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/ifmo/PRGRM/lab_5.2/semester_2_lab/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\ifmo\PRGRM\lab_5.2\semester_2_lab" />
@@ -112,7 +131,15 @@
       <workItem from="1710585155698" duration="6435000" />
       <workItem from="1710850040940" duration="7537000" />
       <workItem from="1711097358742" duration="13733000" />
-      <workItem from="1711112861871" duration="11755000" />
+      <workItem from="1711112861871" duration="13693000" />
+      <workItem from="1711183666634" duration="8481000" />
+      <workItem from="1711224056977" duration="597000" />
+      <workItem from="1711266632170" duration="993000" />
+      <workItem from="1711378457100" duration="1076000" />
+      <workItem from="1711391169812" duration="1064000" />
+      <workItem from="1711447340668" duration="8195000" />
+      <workItem from="1711462045335" duration="1461000" />
+      <workItem from="1711463537319" duration="3064000" />
     </task>
     <task id="LOCAL-00001" summary="The &quot;Person&quot; class and collection singleton has been implemented.">
       <option name="closed" value="true" />
@@ -130,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711129747636</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Some more Lombok and removing unused imports">
+      <option name="closed" value="true" />
+      <created>1711130487773</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711130487773</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +197,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="The &quot;Person&quot; class and collection singleton has been implemented." />
     <MESSAGE value="Parsing of CSv files and collection filling were fully completed, checkers for Person parameters were added, OpenCSV and Lombok annotations were added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Parsing of CSv files and collection filling were fully completed, checkers for Person parameters were added, OpenCSV and Lombok annotations were added." />
+    <MESSAGE value="Some more Lombok and removing unused imports" />
+    <MESSAGE value="Add commands execution and some commands. Add some custom errors." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add commands execution and some commands. Add some custom errors." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
