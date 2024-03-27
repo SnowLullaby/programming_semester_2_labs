@@ -12,4 +12,9 @@ public enum Color {
     Color(String title) {
         this.title = title;
     }
+
+    @Override
+    public String toString(){
+        return (title + "; ");
+    }
 }

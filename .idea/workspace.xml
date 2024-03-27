@@ -5,22 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="Add commands execution and some commands. Add some custom errors.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/commandService/CommandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/AllCommands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/CommandDescription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/PrintAscendingCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/PrintDescendingCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/errors/NoCommandError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/errors/NoParamsError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commandService/CommandInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commandService/ExecutionResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commandService/RequestMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/AllCommandsList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveKeyCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/errors/NoElementWithID.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection.csv" beforeDir="false" afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandService/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commandService/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/AllCommands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandDescription.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/PrintAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/PrintAscendingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/PrintDescendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/PrintDescendingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/errors/NoCommandError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/errors/NoCommandError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Country.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +143,9 @@
       <workItem from="1711391169812" duration="1064000" />
       <workItem from="1711447340668" duration="8195000" />
       <workItem from="1711462045335" duration="1461000" />
-      <workItem from="1711463537319" duration="3064000" />
+      <workItem from="1711463537319" duration="18566000" />
+      <workItem from="1711535578642" duration="1103000" />
+      <workItem from="1711561065296" duration="7344000" />
     </task>
     <task id="LOCAL-00001" summary="The &quot;Person&quot; class and collection singleton has been implemented.">
       <option name="closed" value="true" />
@@ -165,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711130487773</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add commands execution and some commands. Add some custom errors.">
+      <option name="closed" value="true" />
+      <created>1711466854691</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711466854691</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

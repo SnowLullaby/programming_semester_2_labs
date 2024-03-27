@@ -1,5 +1,7 @@
 package models;
 
+import errors.NoElementWithID;
+
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -72,6 +74,12 @@ public class PersonsCollection {
 
     public void removeAll() {
         instance.collection.clear();
+    }
+
+    public void removeAt(Long index) throws NoElementWithID {
+        if(instance.collection.get(index) == null)
+            throw new NoElementWithID();
+        instance.collection.remove(index);
     }
 
     static class ItemLocationComparatorDescending implements Comparator<Long> {

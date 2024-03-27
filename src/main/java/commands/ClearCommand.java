@@ -1,10 +1,22 @@
 package commands;
 
+import commandService.ExecutionResult;
+import commandService.RequestMessage;
 import models.PersonsCollection;
 
 public class ClearCommand implements Command{
-    public void execute() {
+    public ExecutionResult execute(RequestMessage requestMessage) {
         PersonsCollection.getInstance().removeAll();
-        System.out.println("Collection clearing is finished");
+        return new ExecutionResult("Collection clearing is finished", true);
     }
+
+    @Override
+    public ExecutionResult showDescription() {
+        return new ExecutionResult( "clear collection", true);
+    }
+
+    public static ExecutionResult getName() {
+        return new ExecutionResult( "clear", true);
+    }
+
 }

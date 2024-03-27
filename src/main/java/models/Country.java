@@ -17,7 +17,7 @@ public enum Country {
     }
 
     @Override
-    public String toString() {
-        return title;
+    public String toString(){
+        return (title + "; ");
     }
 }
