@@ -10,7 +10,7 @@ public class SaveLoaderCSV implements SaveLoader {
     /**path to file*/
     private final String fileName;
     /**pair of collection and maxID of the elements*/
-    private LinkedHashMap<Long, Person> collection;
+
 
     /**
      * set path to file
@@ -47,14 +47,15 @@ public class SaveLoaderCSV implements SaveLoader {
 
     @Override
     public void save(LinkedHashMap<Long, Person> collection) throws FileNotFoundException {
-            var file = new File(fileName);
-            var writer = new PrintWriter(fileName);
-            CSVWriter csvWriter = new CSVWriter(writer);
+        var file = new File(fileName);
+        var writer = new PrintWriter(file);
+        CSVWriter csvWriter = new CSVWriter(writer);
 
-            for (Long key : collection.keySet()) {
-                Person value = collection.get(key);
-                csvWriter.writeNext(value.getStrings());
-                System.out.println("Key: " + key + ", Value: " + value);
-            }
+        for (Long key : collection.keySet()) {
+            Person value = collection.get(key);
+            csvWriter.writeNext(value.getStrings());
+        }
+
+        writer.close();
     }
 }

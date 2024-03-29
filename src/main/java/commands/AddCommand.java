@@ -10,9 +10,9 @@ abstract public class AddCommand implements Command{
     @Override
     public ExecutionResult execute(RequestMessage requestMessage) {
         try{
+            person = (Person) CommandService.getInstance().readPerson().commandInfo().extendedData();
             setIDAndDate(requestMessage.commandInfo().args() != null ? Long.valueOf(requestMessage.commandInfo().args().get(0))
                     : null);
-            person = (Person) CommandService.getInstance().readPerson().commandInfo().extendedData();
             if (conditionForPeron(person, requestMessage.commandInfo().args() != null ? Long.valueOf(requestMessage.commandInfo().args().get(0))
                     : null)){
                 PersonsCollection.getInstance().addElement(person);
@@ -31,7 +31,6 @@ abstract public class AddCommand implements Command{
 
     protected void setIDAndDate(Long id) throws NoMoreFreeIDException, NoElementWithIDException {
         if (addCondition(id)) {
-            person = new Person();
             person.setId(calculateId(id));
             person.setCreationDateAsNow();
         } else throw new NoMoreFreeIDException();
