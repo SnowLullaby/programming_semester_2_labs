@@ -2,18 +2,17 @@ package commands;
 
 import commandService.ExecutionResult;
 import commandService.RequestMessage;
-import errors.NoElementWithIDError;
-import errors.NoParamsError;
+import exceptions.*;
 import models.PersonsCollection;
 
 public class RemoveKeyCommand implements Command{
     public ExecutionResult execute(RequestMessage requestMessage)  {
         try {
             if (requestMessage.commandInfo().args() == null)
-                throw new NoParamsError();
+                throw new NoParamsException();
             PersonsCollection.getInstance().removeAt(Long.valueOf(requestMessage.commandInfo().args().get(0)));
             return new ExecutionResult("Removed", true);
-        } catch (NoElementWithIDError | NumberFormatException | NoParamsError e) {
+        } catch (NoElementWithIDException | NumberFormatException | NoParamsException e) {
             return new ExecutionResult(e.getMessage(), false);
         }
     }

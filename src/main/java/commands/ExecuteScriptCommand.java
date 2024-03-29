@@ -1,9 +1,6 @@
 package commands;
 
-import commandService.CommandInfo;
-import commandService.CommandService;
-import commandService.ExecutionResult;
-import commandService.RequestMessage;
+import commandService.*;
 import parsers.ScriptParser;
 
 public class ExecuteScriptCommand implements Command{

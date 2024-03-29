@@ -1,17 +1,11 @@
 package commands;
 
-import checkers.CoordinatesChecker;
-import checkers.LocationChecker;
-import checkers.PersonChecker;
-import commandService.ExecutionResult;
-import commandService.RequestMessage;
-import errors.NoElementWithIDError;
-import errors.NoMoreFreeIDError;
+import checkers.*;
+import commandService.*;
+import exceptions.*;
 import models.*;
 
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 import java.util.function.*;
 
 abstract public class AddCommand implements Command{
@@ -31,7 +25,7 @@ abstract public class AddCommand implements Command{
                 return new ExecutionResult("Element added", true);
             }
             return new ExecutionResult("New element is grater", true);
-        } catch (NoMoreFreeIDError | NoElementWithIDError e) {
+        } catch (NoMoreFreeIDException | NoElementWithIDException e) {
             return new ExecutionResult(e.getMessage(), false);
         }
     }
@@ -81,12 +75,12 @@ abstract public class AddCommand implements Command{
         }
     }
 
-    protected void setIDAndDate(Long id) throws NoMoreFreeIDError, NoElementWithIDError {
+    protected void setIDAndDate(Long id) throws NoMoreFreeIDException, NoElementWithIDException {
         if (addCondition(id)) {
             person = new Person();
             person.setId(calculateId(id));
             person.setCreationDateAsNow();
-        } else throw new NoMoreFreeIDError();
+        } else throw new NoMoreFreeIDException();
     }
 
     private static Color toEyeColor(String value) {
@@ -97,7 +91,7 @@ abstract public class AddCommand implements Command{
         return Enum.valueOf(Country.class, value);
     }
 
-    protected abstract boolean addCondition(Long id) throws NoElementWithIDError;
+    protected abstract boolean addCondition(Long id) throws NoElementWithIDException;
 
     protected abstract Long calculateId(Long id);
     @Override

@@ -1,8 +1,6 @@
 package commands;
 
-import commandService.CommandService;
-import commandService.ExecutionResult;
-import commandService.RequestMessage;
+import commandService.*;
 
 public class HistoryCommand implements Command{
 

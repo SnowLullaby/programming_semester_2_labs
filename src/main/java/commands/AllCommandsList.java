@@ -10,7 +10,7 @@ public class AllCommandsList {
     }
 
     private static void fillingMap() {
-        allCommands = new LinkedHashMap<String, Command> ();
+        allCommands = new LinkedHashMap<>();
         allCommands.put(InfoCommand.getName().message(), new InfoCommand());
         allCommands.put(ShowCommand.getName().message(), new ShowCommand());
         allCommands.put(ClearCommand.getName().message(), new ClearCommand());

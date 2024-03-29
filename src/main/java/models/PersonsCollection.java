@@ -1,6 +1,6 @@
 package models;
 
-import errors.NoElementWithIDError;
+import exceptions.NoElementWithIDException;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -81,9 +81,9 @@ public class PersonsCollection {
         findRealMaxID();
     }
 
-    public void removeAt(Long index) throws NoElementWithIDError {
+    public void removeAt(Long index) throws NoElementWithIDException {
         if(instance.collection.get(index) == null)
-            throw new NoElementWithIDError();
+            throw new NoElementWithIDException();
         instance.collection.remove(index);
         findRealMaxID();
     }

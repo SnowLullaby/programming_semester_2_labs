@@ -2,7 +2,7 @@ package commandService;
 
 import commands.AllCommandsList;
 import commands.Command;
-import errors.*;
+import exceptions.*;
 
 import java.util.*;
 
@@ -33,7 +33,7 @@ public class CommandService {
             addToDeque(getParam(0));
             ExecutionResult result = searchCommand(getParam(0)).execute(new RequestMessage(new CommandInfo(getParam(0), currentCommandLine.size() > 1 ? currentCommandLine.subList(1, currentCommandLine.size()) : null, null)));
             System.out.println(result.message());
-        } catch (NoCommandError | NoParamsError e) {
+        } catch (NoCommandException | NoParamsException e) {
             System.out.println(e.getMessage());
         }
     }
@@ -49,17 +49,17 @@ public class CommandService {
         return new RequestMessage(new CommandInfo("history",null, commandQueue));
     }
 
-    private Command searchCommand(String name) throws NoCommandError, NoParamsError {
+    private Command searchCommand(String name) throws NoCommandException, NoParamsException {
         if (!commandCollection.containsKey(name))
-            throw new NoCommandError();
+            throw new NoCommandException();
         return commandCollection.get(name);
     }
 
-    private String getParam(int index) throws NoParamsError {
+    private String getParam(int index) throws NoParamsException {
         try {
             return currentCommandLine.get(index);
         } catch (Exception e) {
-            throw new NoParamsError();
+            throw new NoParamsException();
         }
     }
 
@@ -70,7 +70,7 @@ public class CommandService {
             System.out.println(result.message());
         } catch (NumberFormatException e) {
             System.out.println("Incorrect argument's tip");
-        } catch (NoCommandError | NoParamsError e) {
+        } catch (NoCommandException | NoParamsException e) {
             System.out.println(e.getMessage());
         }
     }

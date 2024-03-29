@@ -2,7 +2,7 @@ package commands;
 
 import commandService.ExecutionResult;
 import commandService.RequestMessage;
-import errors.NoParamsError;
+import exceptions.NoParamsException;
 import models.Country;
 import models.PersonsCollection;
 
@@ -11,10 +11,10 @@ public class RemoveAllByNationalityCommand extends RemoveKeyCommand{
     public ExecutionResult execute(RequestMessage requestMessage) {
         try {
             if (requestMessage.commandInfo().args() == null)
-                throw new NoParamsError();
+                throw new NoParamsException();
             PersonsCollection.getInstance().removeByNationality(findCountryByTitle(requestMessage.commandInfo().args().get(0)));
             return new ExecutionResult("Removed", true);
-        } catch (IllegalArgumentException | NoParamsError e) {
+        } catch (IllegalArgumentException | NoParamsException e) {
             return new ExecutionResult(e.getMessage(), false);
         }
     }

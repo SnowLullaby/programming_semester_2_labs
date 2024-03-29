@@ -1,7 +1,6 @@
 package commands;
 
-import commandService.ExecutionResult;
-import commandService.RequestMessage;
+import commandService.*;
 import models.PersonsCollection;
 
 public class ClearCommand implements Command{

@@ -1,7 +1,6 @@
 package commands;
 
 import commandService.ExecutionResult;
-import models.PersonsCollection;
 
 public class PrintAscendingCommand extends ShowCommand{
 

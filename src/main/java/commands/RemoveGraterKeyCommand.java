@@ -1,18 +1,17 @@
 package commands;
 
-import commandService.ExecutionResult;
-import commandService.RequestMessage;
-import errors.NoParamsError;
+import commandService.*;
+import exceptions.NoParamsException;
 import models.PersonsCollection;
 
 public class RemoveGraterKeyCommand extends RemoveKeyCommand{
     public ExecutionResult execute(RequestMessage requestMessage)  {
         try {
             if (requestMessage.commandInfo().args() == null)
-                throw new NoParamsError();
+                throw new NoParamsException();
             PersonsCollection.getInstance().removeGrater(Long.valueOf(requestMessage.commandInfo().args().get(0)));
             return new ExecutionResult("Removed", true);
-        } catch (NumberFormatException | NoParamsError e) {
+        } catch (NumberFormatException | NoParamsException e) {
             return new ExecutionResult(e.getMessage(), false);
         }
     }
