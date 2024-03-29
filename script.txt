@@ -1,0 +1,4 @@
+show
+execute_script from_script.txt
+insert
+show

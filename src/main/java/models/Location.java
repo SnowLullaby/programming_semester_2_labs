@@ -3,6 +3,9 @@ package models;
 import com.opencsv.bean.CsvBindByPosition;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 @Getter @Setter
 public class Location {
     @CsvBindByPosition(position = 9, required = true)
@@ -17,5 +20,10 @@ public class Location {
     @Override
     public String toString(){
         return ("[" + x + "; " + y + "; " + z + "]");
+    }
+
+    public String[] getStrings() {
+        ArrayList<String> parameters = new ArrayList<>(Arrays.asList(Double.toString(x), Float.toString(y), Integer.toString(z)));
+        return parameters.toArray(new String[0]);
     }
 }

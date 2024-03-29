@@ -1,7 +1,10 @@
 package models;
 
-import errors.NoElementWithID;
+import errors.NoElementWithIDError;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.io.FileNotFoundException;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -13,6 +16,7 @@ public class PersonsCollection {
     private SaveLoader saveLoad;
     private ZonedDateTime creationTime;
     private LinkedHashMap<Long, Person> collection;
+    @Getter @Setter
     private Long maxID = 0L;
 
     public static PersonsCollection getInstance() {
@@ -74,12 +78,51 @@ public class PersonsCollection {
 
     public void removeAll() {
         instance.collection.clear();
+        findRealMaxID();
     }
 
-    public void removeAt(Long index) throws NoElementWithID {
+    public void removeAt(Long index) throws NoElementWithIDError {
         if(instance.collection.get(index) == null)
-            throw new NoElementWithID();
+            throw new NoElementWithIDError();
         instance.collection.remove(index);
+        findRealMaxID();
+    }
+
+    public void removeGrater(Long index) {
+        instance.collection.entrySet().removeIf(entry -> entry.getKey() > index);
+        findRealMaxID();
+    }
+
+    public void save() throws FileNotFoundException {
+        saveLoad.save(instance.collection);
+    }
+
+    public void removeByNationality(Country nationality) {
+        instance.collection.entrySet().removeIf(entry -> entry.getValue().getNationality() == nationality);
+        findRealMaxID();
+    }
+
+    public void addElement(Person person) {
+        instance.collection.put(person.getId(),person);
+        findRealMaxID();
+    }
+
+    private void findRealMaxID() {
+        Long maxKey = 0L;
+        for (Map.Entry<Long, Person> entry : instance.collection.entrySet()) {
+            if (entry.getKey() > maxKey) {
+                maxKey = entry.getKey();
+            }
+        }
+        instance.maxID = maxKey;
+    }
+
+    public boolean getElementByID(Long index) {
+        return instance.collection.get(index) != null;
+    }
+
+    public String getPersonByID(Long index) {
+        return instance.collection.get(index).getName();
     }
 
     static class ItemLocationComparatorDescending implements Comparator<Long> {

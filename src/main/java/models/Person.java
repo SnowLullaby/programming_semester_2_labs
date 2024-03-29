@@ -2,6 +2,9 @@ package models;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvCustomBindByPosition;
 import com.opencsv.bean.CsvRecurse;
@@ -67,4 +70,11 @@ public class Person {
                 height + "; " + weight + "; " + eyeColor + " " + nationality + " " + location + "]");
     }
 
+    public String[] getStrings() {
+        ArrayList<String> parameters = new ArrayList<>(Arrays.asList(Long.toString(id), name));
+        parameters.addAll(Arrays.asList(coordinates.getStrings()));
+        parameters.addAll(Arrays.asList(getCreationDate(), Integer.toString(height), Float.toString(weight), eyeColor.toString(), nationality.toString()));
+        parameters.addAll(Arrays.asList(location.getStrings()));
+        return parameters.toArray(new String[0]);
+    }
 }

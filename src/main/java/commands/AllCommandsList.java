@@ -18,5 +18,14 @@ public class AllCommandsList {
         allCommands.put(PrintAscendingCommand.getName().message(), new PrintAscendingCommand());
         allCommands.put(PrintDescendingCommand.getName().message(), new PrintDescendingCommand());
         allCommands.put(RemoveKeyCommand.getName().message(), new RemoveKeyCommand());
+        allCommands.put(HelpCommand.getName().message(), new HelpCommand());
+        allCommands.put(RemoveGraterKeyCommand.getName().message(), new RemoveGraterKeyCommand());
+        allCommands.put(SaveCommand.getName().message(), new SaveCommand());
+        allCommands.put(RemoveAllByNationalityCommand.getName().message(), new RemoveAllByNationalityCommand());
+        allCommands.put(ExecuteScriptCommand.getName().message(), new ExecuteScriptCommand());
+        allCommands.put(InsertCommand.getName().message(), new InsertCommand());
+        allCommands.put(UpdateCommand.getName().message(), new UpdateCommand());
+        allCommands.put(ReplaceIfLowerCommand.getName().message(), new ReplaceIfLowerCommand());
+        allCommands.put(HistoryCommand.getName().message(), new HistoryCommand());
     }
 }

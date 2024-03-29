@@ -7,11 +7,11 @@ public class CoordinatesChecker {
         return checkX(coordinates.getX()) && checkY(coordinates.getY());
     }
 
-    private static boolean checkY(Double y) {
+    public static boolean checkY(Double y) {
         return y != null && y < 933;
     }
 
-    private static boolean checkX(Double x) {
+    public static boolean checkX(Double x) {
         return x != null;
     }
 }

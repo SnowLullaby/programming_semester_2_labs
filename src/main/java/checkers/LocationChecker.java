@@ -9,15 +9,15 @@ public class LocationChecker {
                 && checkZ(location.getZ());
     }
 
-    private static boolean checkZ(Integer z) {
+    public static boolean checkZ(Integer z) {
         return z != null;
     }
 
-    private static boolean checkY(float y) {
+    public static boolean checkY(float y) {
         return true;
     }
 
-    private static boolean checkX(Double x) {
+    public static boolean checkX(Double x) {
         return x != null;
     }
 }

@@ -1,5 +1,6 @@
 package parsers;
 
+import com.opencsv.CSVWriter;
 import models.Person;
 import models.SaveLoader;
 import java.io.*;
@@ -45,17 +46,15 @@ public class SaveLoaderCSV implements SaveLoader {
     }
 
     @Override
-    public void save(LinkedHashMap<Long, Person> collectionAndID) {
-        /*try {
-            this.collectionAndID = collectionAndID;
-            saveImp();
-        } catch (PropertyException e) {
-            System.out.println("Access to file is denied");
-        } catch (JAXBException e) {
-            System.out.println("Saving into file error. Error's text:");
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println("Impossible open file for writing");
-        }*/
+    public void save(LinkedHashMap<Long, Person> collection) throws FileNotFoundException {
+            var file = new File(fileName);
+            var writer = new PrintWriter(fileName);
+            CSVWriter csvWriter = new CSVWriter(writer);
+
+            for (Long key : collection.keySet()) {
+                Person value = collection.get(key);
+                csvWriter.writeNext(value.getStrings());
+                System.out.println("Key: " + key + ", Value: " + value);
+            }
     }
 }
