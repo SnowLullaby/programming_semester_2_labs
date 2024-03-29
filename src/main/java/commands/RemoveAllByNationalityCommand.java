@@ -6,8 +6,7 @@ import exceptions.NoParamsException;
 import models.Country;
 import models.PersonsCollection;
 
-public class RemoveAllByNationalityCommand extends RemoveKeyCommand{
-    @Override
+public class RemoveAllByNationalityCommand implements Command{
     public ExecutionResult execute(RequestMessage requestMessage) {
         try {
             if (requestMessage.commandInfo().args() == null)
@@ -27,7 +26,7 @@ public class RemoveAllByNationalityCommand extends RemoveKeyCommand{
         }
         return null;
     }
-    @Override
+
     public ExecutionResult showDescription() {
         return new ExecutionResult("remove element with same nationality", true);
     }

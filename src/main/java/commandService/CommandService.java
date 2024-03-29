@@ -3,6 +3,7 @@ package commandService;
 import commands.AllCommandsList;
 import commands.Command;
 import exceptions.*;
+import models.Person;
 
 import java.util.*;
 
@@ -11,7 +12,6 @@ public class CommandService {
     private LinkedHashMap<String, Command> commandCollection;
     private List<String> currentCommandLine = null;
     static Scanner scanner = new Scanner(System.in);
-    private static final int MAX_SIZE = 7;
     private ArrayDeque<String> commandQueue = new ArrayDeque<>();
 
     public static CommandService getInstance() {
@@ -35,12 +35,15 @@ public class CommandService {
             System.out.println(result.message());
         } catch (NoCommandException | NoParamsException e) {
             System.out.println(e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Incorrect argument's tip");
         }
     }
 
     private void addToDeque(String command) {
-        if (instance.commandQueue.size() >= MAX_SIZE) {
-            instance.commandQueue.removeFirst();
+        int MAX_SIZE = 7;
+        if (commandQueue.size() >= MAX_SIZE) {
+            commandQueue.removeFirst();
         }
         instance.commandQueue.addLast(command);
     }
@@ -73,5 +76,11 @@ public class CommandService {
         } catch (NoCommandException | NoParamsException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public RequestMessage readPerson() {
+        PromptForPerson prompt = new PromptForPerson(scanner);
+        Person person = prompt.readPerson();
+        return new RequestMessage(new CommandInfo("add", null, person));
     }
 }

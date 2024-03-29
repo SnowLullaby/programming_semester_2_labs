@@ -12,8 +12,10 @@ public class RemoveKeyCommand implements Command{
                 throw new NoParamsException();
             PersonsCollection.getInstance().removeAt(Long.valueOf(requestMessage.commandInfo().args().get(0)));
             return new ExecutionResult("Removed", true);
-        } catch (NoElementWithIDException | NumberFormatException | NoParamsException e) {
+        } catch (NoElementWithIDException | NoParamsException e) {
             return new ExecutionResult(e.getMessage(), false);
+        } catch (NumberFormatException e){
+            return new ExecutionResult("Incorrect argument's tip", true);
         }
     }
 

@@ -4,7 +4,7 @@ import commandService.*;
 import exceptions.NoParamsException;
 import models.PersonsCollection;
 
-public class RemoveGraterKeyCommand extends RemoveKeyCommand{
+public class RemoveGraterKeyCommand implements Command{
     public ExecutionResult execute(RequestMessage requestMessage)  {
         try {
             if (requestMessage.commandInfo().args() == null)
@@ -16,7 +16,6 @@ public class RemoveGraterKeyCommand extends RemoveKeyCommand{
         }
     }
 
-    @Override
     public ExecutionResult showDescription() {
         return new ExecutionResult("remove elements with grater id", true);
     }

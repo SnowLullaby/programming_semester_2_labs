@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="lab completed :)">
+    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="Some name changes, some import fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/commandService/PromptForPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commandService/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commandService/CommandService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/AllCommandsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/AllCommandsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/HistoryCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/PrintAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/PrintAscendingCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByNationalityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByNationalityCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveGraterKeyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveGraterKeyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveKeyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveKeyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/UpdateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/errors/NoCommandError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoCommandException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/errors/NoElementWithIDError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoElementWithIDException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/errors/NoMoreFreeIDError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoMoreFreeIDException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/errors/NoParamsError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoParamsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +134,7 @@
       <workItem from="1711561065296" duration="9237000" />
       <workItem from="1711697392616" duration="22842000" />
       <workItem from="1711723798183" duration="7013000" />
-      <workItem from="1711735375655" duration="2466000" />
+      <workItem from="1711735375655" duration="5631000" />
     </task>
     <task id="LOCAL-00001" summary="The &quot;Person&quot; class and collection singleton has been implemented.">
       <option name="closed" value="true" />
@@ -194,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711730545772</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Some name changes, some import fix">
+      <option name="closed" value="true" />
+      <created>1711738904112</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711738904112</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +228,8 @@
     <MESSAGE value="Add commands execution and some commands. Add some custom errors." />
     <MESSAGE value="Re-write execution method, add some errors, add wrappers for requests and execution results between CommandService and Commands" />
     <MESSAGE value="lab completed :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab completed :)" />
+    <MESSAGE value="Some name changes, some import fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some name changes, some import fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
