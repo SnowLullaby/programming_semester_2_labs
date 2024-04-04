@@ -10,9 +10,9 @@ public class RemoveAllByNationalityCommand implements Command{
     public ExecutionResult execute(RequestMessage requestMessage) {
         try {
             if (requestMessage.commandInfo().args() == null)
-                throw new NoParamsException();
+                throw new NoParamsException(requestMessage.commandInfo().name());
             PersonsCollection.getInstance().removeByNationality(findCountryByTitle(requestMessage.commandInfo().args().get(0)));
-            return new ExecutionResult("Removed", true);
+            return new ExecutionResult("Element with ID " + Long.valueOf(requestMessage.commandInfo().args().get(0)) + " removed", true);
         } catch (IllegalArgumentException | NoParamsException e) {
             return new ExecutionResult(e.getMessage(), false);
         }

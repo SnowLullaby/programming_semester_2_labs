@@ -8,7 +8,7 @@ public class RemoveGraterKeyCommand implements Command{
     public ExecutionResult execute(RequestMessage requestMessage)  {
         try {
             if (requestMessage.commandInfo().args() == null)
-                throw new NoParamsException();
+                throw new NoParamsException(requestMessage.commandInfo().name());
             PersonsCollection.getInstance().removeGrater(Long.valueOf(requestMessage.commandInfo().args().get(0)));
             return new ExecutionResult("Removed", true);
         } catch (NumberFormatException | NoParamsException e) {

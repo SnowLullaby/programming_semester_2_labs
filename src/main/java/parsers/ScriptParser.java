@@ -1,8 +1,5 @@
 package parsers;
 
-import commandService.CommandService;
-import models.PersonsCollection;
-
 import java.io.*;
 import java.util.ArrayList;
 

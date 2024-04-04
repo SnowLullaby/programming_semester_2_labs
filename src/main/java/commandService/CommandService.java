@@ -30,13 +30,13 @@ public class CommandService {
     public void execute() {
         currentCommandLine = Arrays.asList(scanner.nextLine().trim().split(" "));
         try {
-            addToDeque(getParam(0));
-            ExecutionResult result = searchCommand(getParam(0)).execute(new RequestMessage(new CommandInfo(getParam(0), currentCommandLine.size() > 1 ? currentCommandLine.subList(1, currentCommandLine.size()) : null, null)));
+            addToDeque(instance.getFirstParam());
+            ExecutionResult result = searchCommand(instance.getFirstParam()).execute(new RequestMessage(new CommandInfo(instance.getFirstParam(), currentCommandLine.size() > 1 ? currentCommandLine.subList(1, currentCommandLine.size()) : null, null)));
             System.out.println(result.message());
         } catch (NoCommandException | NoParamsException e) {
             System.out.println(e.getMessage());
         } catch (NumberFormatException e) {
-            System.out.println("Incorrect argument's tip");
+            System.out.println("Incorrect argument's tip ");
         }
     }
 
@@ -54,22 +54,18 @@ public class CommandService {
 
     private Command searchCommand(String name) throws NoCommandException, NoParamsException {
         if (!commandCollection.containsKey(name))
-            throw new NoCommandException();
+            throw new NoCommandException(name);
         return commandCollection.get(name);
     }
 
-    private String getParam(int index) throws NoParamsException {
-        try {
-            return currentCommandLine.get(index);
-        } catch (Exception e) {
-            throw new NoParamsException();
-        }
+    private String getFirstParam() {
+            return currentCommandLine.get(0);
     }
 
     public void executeFromLine(RequestMessage currentCommand) {
         currentCommandLine = Arrays.asList(currentCommand.commandInfo().name().trim().split(" "));
         try {
-            ExecutionResult result = searchCommand(getParam(0)).execute(new RequestMessage(new CommandInfo(getParam(0), currentCommandLine.size() > 1 ? currentCommandLine.subList(1, currentCommandLine.size()) : null, null)));
+            ExecutionResult result = searchCommand(instance.getFirstParam()).execute(new RequestMessage(new CommandInfo(instance.getFirstParam(), currentCommandLine.size() > 1 ? currentCommandLine.subList(1, currentCommandLine.size()) : null, null)));
             System.out.println(result.message());
         } catch (NumberFormatException e) {
             System.out.println("Incorrect argument's tip");

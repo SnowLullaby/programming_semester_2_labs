@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="UML + script">
+    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="Add javadoc for main class and ScriptParser.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/from_script.txt.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandService/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commandService/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByNationalityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByNationalityCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveGraterKeyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveGraterKeyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveKeyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveKeyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NoCommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoCommandException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NoElementWithIDException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoElementWithIDException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NoParamsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoParamsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PersonsCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/SaveLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/SaveLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/CsvParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/CsvParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/SaveLoaderCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/SaveLoaderCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parsers/ScriptParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/ScriptParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,35 +78,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.semester_2_lab [:Main.main()].executor": "Run",
-    "Gradle.semester_2_lab.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "database.data.extractors.current.export.id": "CSV-Groovy.csv.groovy",
-    "database.data.extractors.current.id": "CSV-Groovy.csv.groovy",
-    "git-widget-placeholder": "0bffa7a4",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/ifmo/PRGRM/lab_5.2/semester_2_lab/opencsv-5.9.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/ifmo/PRGRM/lab_5.2/semester_2_lab/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.semester_2_lab [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;CSV-Groovy.csv.groovy&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;CSV-Groovy.csv.groovy&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;b07c1579&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ifmo/PRGRM/lab_5.2/semester_2_lab/opencsv-5.9.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/ifmo/PRGRM/lab_5.2/semester_2_lab/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
@@ -141,6 +154,11 @@
       <workItem from="1711723798183" duration="7013000" />
       <workItem from="1711735375655" duration="8072000" />
       <workItem from="1711745372775" duration="247000" />
+      <workItem from="1711798171034" duration="2322000" />
+      <workItem from="1711816125356" duration="740000" />
+      <workItem from="1711878543523" duration="882000" />
+      <workItem from="1712234947868" duration="2366000" />
+      <workItem from="1712255521208" duration="8650000" />
     </task>
     <task id="LOCAL-00001" summary="The &quot;Person&quot; class and collection singleton has been implemented.">
       <option name="closed" value="true" />
@@ -230,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711744935994</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add javadoc for main class and ScriptParser.java">
+      <option name="closed" value="true" />
+      <created>1711793338214</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711793338214</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +311,8 @@
     <MESSAGE value="Client-server logic improved" />
     <MESSAGE value="Hotfix SaveCommand and AddCommand" />
     <MESSAGE value="UML + script" />
-    <option name="LAST_COMMIT_MESSAGE" value="UML + script" />
+    <MESSAGE value="Add javadoc for main class and ScriptParser.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add javadoc for main class and ScriptParser.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

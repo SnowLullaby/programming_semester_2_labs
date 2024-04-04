@@ -9,7 +9,6 @@ import java.util.*;
 public class SaveLoaderCSV implements SaveLoader {
     /**path to file*/
     private final String fileName;
-    /**pair of collection and maxID of the elements*/
 
 
     /**
@@ -19,7 +18,7 @@ public class SaveLoaderCSV implements SaveLoader {
     public SaveLoaderCSV(String fileName) {
         this.fileName = fileName;
     }
-    public List<Person> parse() {
+    public List<Person> parse() throws IOException {
         var file = new File(fileName);
         InputStreamReader reader = new InputStreamReader(getFileStream(file));
         var result = CsvParser.parsing(reader);
@@ -27,22 +26,15 @@ public class SaveLoaderCSV implements SaveLoader {
         return result;
     }
 
-    private InputStream getFileStream(File file) {
-        try {
-            return new FileInputStream(file);
-        } catch (FileNotFoundException e) {
-            System.out.println("File doesn't exist or access is denied");
-            System.exit(0);
-        }
-        return null;
+    private InputStream getFileStream(File file) throws FileNotFoundException {
+        return new FileInputStream(file);
+        // System.out.println("File doesn't exist or access is denied");
     }
 
-    private void closeFile(InputStreamReader reader){
-        try {
-            reader.close();
-        } catch (IOException e) {
-            System.out.println("Access to file is denied");
-        }
+    private void closeFile(InputStreamReader reader) throws IOException {
+        reader.close();
+        //System.out.println("Access to file is denied");
+
     }
 
     @Override

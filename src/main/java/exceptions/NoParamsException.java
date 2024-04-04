@@ -1,7 +1,9 @@
 package exceptions;
 
 public class NoParamsException extends Exception {
-    public NoParamsException() {
-        super("Not enough arguments");
+    String commandName;
+    public NoParamsException(String command) {
+        super("Not enough arguments for command '" + command + "'");
+        this.commandName = command;
     }
 }

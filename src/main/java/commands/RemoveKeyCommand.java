@@ -9,13 +9,13 @@ public class RemoveKeyCommand implements Command{
     public ExecutionResult execute(RequestMessage requestMessage)  {
         try {
             if (requestMessage.commandInfo().args() == null)
-                throw new NoParamsException();
+                throw new NoParamsException(requestMessage.commandInfo().name());
             PersonsCollection.getInstance().removeAt(Long.valueOf(requestMessage.commandInfo().args().get(0)));
-            return new ExecutionResult("Removed", true);
+            return new ExecutionResult("Element with ID " + Long.valueOf(requestMessage.commandInfo().args().get(0)) + " removed", true);
         } catch (NoElementWithIDException | NoParamsException e) {
             return new ExecutionResult(e.getMessage(), false);
         } catch (NumberFormatException e){
-            return new ExecutionResult("Incorrect argument's tip", true);
+            return new ExecutionResult("Incorrect argument's tip for command " + requestMessage.commandInfo().name(), true);
         }
     }
 

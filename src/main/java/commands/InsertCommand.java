@@ -12,7 +12,7 @@ public class InsertCommand extends AddCommand{
     }
 
     @Override
-    protected boolean addCondition(Long id) {
+    protected boolean addCondition(Long id, String commandName) {
         return PersonsCollection.getInstance().getMaxID() < Integer.MAX_VALUE;
     }
 

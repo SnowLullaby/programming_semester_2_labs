@@ -2,6 +2,8 @@ import commandService.CommandService;
 import parsers.SaveLoaderCSV;
 import models.*;
 
+import java.io.IOException;
+
 /**
  *  Main class initialise collection of <b>Person</b> and service for <b>Commands</b>
  *  @see PersonsCollection
@@ -19,7 +21,13 @@ public class Main {
     public static void main(String[] args) {
         initFileName(System.getenv("lab")); //sysdm.cpl
         SaveLoader saveLoad = new SaveLoaderCSV(fileName);
-        PersonsCollection.initInstance(saveLoad);
+        try {
+            PersonsCollection.initInstance(saveLoad);
+        } catch (IOException e){
+            System.out.println("Problems with Collection initialization.\nError text: " + e.getMessage()+ "\nCause of error: " + e.getCause());
+            System.exit(0);
+        }
+
         CommandService.initInstance();
         var commandService = CommandService.getInstance();
 
@@ -40,5 +48,4 @@ public class Main {
             System.exit(0);
         }
     }
-
 }

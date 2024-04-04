@@ -1,7 +1,13 @@
 package exceptions;
 
 public class NoElementWithIDException extends Exception{
-    public NoElementWithIDException() {
-        super("There is no elements with this ID");
+    Long additionalInfo;
+    public NoElementWithIDException(Long additionalInfo) {
+        super("There is no elements with id " + additionalInfo.toString());
+        this.additionalInfo = additionalInfo;
+    }
+
+    public String getAdditionalInfo() {
+        return additionalInfo.toString();
     }
 }

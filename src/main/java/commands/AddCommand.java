@@ -10,9 +10,9 @@ abstract public class AddCommand implements Command{
     @Override
     public ExecutionResult execute(RequestMessage requestMessage) {
         try{
-            person = (Person) CommandService.getInstance().readPerson().commandInfo().extendedData();
             setIDAndDate(requestMessage.commandInfo().args() != null ? Long.valueOf(requestMessage.commandInfo().args().get(0))
-                    : null);
+                    : null, requestMessage.commandInfo().name());
+            person = (Person) CommandService.getInstance().readPerson().commandInfo().extendedData();
             if (conditionForPeron(person, requestMessage.commandInfo().args() != null ? Long.valueOf(requestMessage.commandInfo().args().get(0))
                     : null)){
                 PersonsCollection.getInstance().addElement(person);
@@ -21,7 +21,7 @@ abstract public class AddCommand implements Command{
                 return new ExecutionResult("Element added", true);
             }
             return new ExecutionResult("New element is grater", true);
-        } catch (NoMoreFreeIDException | NoElementWithIDException e) {
+        } catch (NoMoreFreeIDException | NoElementWithIDException | NoParamsException e) {
             return new ExecutionResult(e.getMessage(), false);
         }
     }
@@ -29,14 +29,14 @@ abstract public class AddCommand implements Command{
     public abstract boolean conditionForPeron(Person person, Long id);
 
 
-    protected void setIDAndDate(Long id) throws NoMoreFreeIDException, NoElementWithIDException {
-        if (addCondition(id)) {
+    protected void setIDAndDate(Long id, String commandName) throws NoMoreFreeIDException, NoElementWithIDException, NoParamsException {
+        if (addCondition(id, commandName)) {
             person.setId(calculateId(id));
             person.setCreationDateAsNow();
         } else throw new NoMoreFreeIDException();
     }
 
-    protected abstract boolean addCondition(Long id) throws NoElementWithIDException;
+    protected abstract boolean addCondition(Long id, String commandName) throws NoElementWithIDException, NoParamsException;
 
     protected abstract Long calculateId(Long id);
     @Override

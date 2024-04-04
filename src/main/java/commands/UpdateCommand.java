@@ -2,6 +2,7 @@ package commands;
 
 import commandService.ExecutionResult;
 import exceptions.NoElementWithIDException;
+import exceptions.NoParamsException;
 import models.Person;
 import models.PersonsCollection;
 
@@ -12,13 +13,13 @@ public class UpdateCommand extends AddCommand{
     }
 
     @Override
-    protected boolean addCondition(Long id) throws NoElementWithIDException {
+    protected boolean addCondition(Long id, String commandName) throws NoElementWithIDException, NoParamsException {
         if(id != null) {
             if (PersonsCollection.getInstance().getElementByID(id))
                 return PersonsCollection.getInstance().getElementByID(id);
-            throw new NoElementWithIDException();
+            throw new NoElementWithIDException(id);
         }
-        return false;
+        throw new NoParamsException(commandName);
     }
 
     @Override

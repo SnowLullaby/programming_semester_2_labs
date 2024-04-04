@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -24,11 +25,11 @@ public class PersonsCollection {
         return instance;
     }
 
-    public static void initInstance(SaveLoader saveLoad) {
+    public static void initInstance(SaveLoader saveLoad) throws IOException {
         fillingInstance(saveLoad);
     }
 
-    private static void fillingInstance(SaveLoader saveLoad) {
+    private static void fillingInstance(SaveLoader saveLoad) throws IOException {
         instance.saveLoad = saveLoad;
         var unchecked = instance.saveLoad.parse();
         instance.collection = new LinkedHashMap<>();
@@ -81,10 +82,10 @@ public class PersonsCollection {
         findRealMaxID();
     }
 
-    public void removeAt(Long index) throws NoElementWithIDException {
-        if(instance.collection.get(index) == null)
-            throw new NoElementWithIDException();
-        instance.collection.remove(index);
+    public void removeAt(Long id) throws NoElementWithIDException {
+        if(instance.collection.get(id) == null)
+            throw new NoElementWithIDException(id);
+        instance.collection.remove(id);
         findRealMaxID();
     }
 
