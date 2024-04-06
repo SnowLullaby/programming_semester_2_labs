@@ -5,18 +5,19 @@ import models.*;
 import java.io.IOException;
 
 /**
- *  Main class initialise collection of <b>Person</b> and service for <b>Commands</b>
- *  @see PersonsCollection
- *  @see CommandService
+ *  Main class, initialise collection of <b>Person</b> and service for <b>Commands</b>
  *  @author Ekaterina Vavilina
- *  @version 1.0
+ *  @see PersonsCollection#initInstance(SaveLoader)
+ *  @see CommandService#initInstance()
  */
 public class Main {
     /** Path to csv file with collection */
     private static String fileName;
 
     /**
-     * Function create instance of <b>Person Collection</b>
+     * Function create instance of <b>Person Collection</b> and <b>Command Service</b>
+     * @see PersonsCollection#initInstance(SaveLoader)
+     * @see CommandService#initInstance()
      */
     public static void main(String[] args) {
         initFileName(System.getenv("lab")); //sysdm.cpl
@@ -38,7 +39,7 @@ public class Main {
 
     /**
      * Function get path to file as string from environment
-     * @param fileName - string with path to fie
+     * @param fileName string with path to fie
      */
     private static void initFileName (String fileName){
         try {
