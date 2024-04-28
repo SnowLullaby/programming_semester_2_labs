@@ -78,8 +78,17 @@ public class Person {
      * now() - current date
      */
     public void setCreationDateAsNow() {
-        creationDate = ZonedDateTime.now();
+        // Получаем текущую дату и время
+        ZonedDateTime now = ZonedDateTime.now();
+
+        // Форматируем дату и время в нужный формат
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss X");
+        String formattedDateTime = now.format(formatter);
+
+        // Преобразуем строковое представление обратно в ZonedDateTime
+        this.creationDate = ZonedDateTime.parse(formattedDateTime, formatter);
     }
+
 
     /**
      * Function to return Person as string

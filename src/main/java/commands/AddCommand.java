@@ -10,11 +10,14 @@ abstract public class AddCommand implements Command{
     @Override
     public ExecutionResult execute(RequestMessage requestMessage) {
         try{
+            calculateId(requestMessage.commandInfo().args() != null ? Long.valueOf(requestMessage.commandInfo().args().get(0))
+                    : null);
+            person = (Person) CommandService.getInstance().readPerson().commandInfo().extendedData();
             setIDAndDate(requestMessage.commandInfo().args() != null ? Long.valueOf(requestMessage.commandInfo().args().get(0))
                     : null, requestMessage.commandInfo().name());
-            person = (Person) CommandService.getInstance().readPerson().commandInfo().extendedData();
             if (conditionForPeron(person, requestMessage.commandInfo().args() != null ? Long.valueOf(requestMessage.commandInfo().args().get(0))
                     : null)){
+                System.out.println(person);
                 PersonsCollection.getInstance().addElement(person);
                 PersonsCollection.getInstance().setMaxID(calculateId(requestMessage.commandInfo().args() != null ? Long.valueOf(requestMessage.commandInfo().args().get(0))
                         : null));

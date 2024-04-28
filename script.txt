@@ -1,4 +1,3 @@
 show
-execute_script from_script.txt
-insert
-show
+execute_script script.txt
+info

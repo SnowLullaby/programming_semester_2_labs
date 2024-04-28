@@ -1,17 +1,17 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'org.example'
-version = '1.0-SNAPSHOT'
+version = '1.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.9.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'com.opencsv:opencsv:5.9'
 
     compileOnly 'org.projectlombok:lombok:1.18.32'
     annotationProcessor 'org.projectlombok:lombok:1.18.32'
@@ -19,9 +19,22 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.32'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
 
-    implementation 'com.opencsv:opencsv:5.8'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
 test {
     useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'Main'
+    }
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }

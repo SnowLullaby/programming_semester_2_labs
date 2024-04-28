@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="semester_2_lab:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="review 1-3 issues fixed">
+    <list default="true" id="782e2fb1-7334-4640-9633-156284bc003f" name="Changes" comment="Save command fix + javadoc">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/semester_2_lab_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collection.csv" beforeDir="false" afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NoCommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoCommandException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NoElementWithIDException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoElementWithIDException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NoMoreFreeIDException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoMoreFreeIDException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NoParamsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NoParamsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/AddCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/SaveLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/SaveLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/ZoneDateTimeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ZoneDateTimeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/CsvParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/CsvParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/SaveLoaderCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/SaveLoaderCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/ScriptParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/ScriptParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +36,32 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="semester_2_lab" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="semester_2_lab" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="semester_2_lab" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="semester_2_lab" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -83,6 +103,15 @@
   &quot;keyToString&quot;: {
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Gradle.semester_2_lab [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab [buildDependents].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab [check].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab [compileJava].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab [init].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab [jar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab [projects].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.semester_2_lab [wrapper].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.semester_2_lab.executor&quot;: &quot;Run&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
@@ -90,11 +119,12 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.gradlew.executor&quot;: &quot;Run&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;CSV-Groovy.csv.groovy&quot;,
     &quot;database.data.extractors.current.id&quot;: &quot;CSV-Groovy.csv.groovy&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;f839ab08&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;d28a64d9&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/ifmo/PRGRM/lab_5.2/semester_2_lab/opencsv-5.9.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ifmo/PRGRM/MusicBand&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -115,6 +145,142 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\ifmo\PRGRM\lab_5.2\semester_2_lab" />
     </key>
+  </component>
+  <component name="RunManager" selected="Gradle.semester_2_lab [compileJava]">
+    <configuration name="semester_2_lab [compileJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileJava" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="semester_2_lab [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="init" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="semester_2_lab [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="semester_2_lab [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="semester_2_lab [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="wrapper" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="gradlew" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/gradlew" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/sh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.semester_2_lab [jar]" />
+        <item itemvalue="Gradle.semester_2_lab [run]" />
+        <item itemvalue="Gradle.semester_2_lab [init]" />
+        <item itemvalue="Gradle.semester_2_lab [wrapper]" />
+        <item itemvalue="Gradle.semester_2_lab [compileJava]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -163,7 +329,8 @@
       <workItem from="1712265076934" duration="222000" />
       <workItem from="1712321723301" duration="8010000" />
       <workItem from="1712384990579" duration="3953000" />
-      <workItem from="1712393205795" duration="405000" />
+      <workItem from="1712393205795" duration="13316000" />
+      <workItem from="1712423484411" duration="523000" />
     </task>
     <task id="LOCAL-00001" summary="The &quot;Person&quot; class and collection singleton has been implemented.">
       <option name="closed" value="true" />
@@ -269,7 +436,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712265237208</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Save command fix + javadoc">
+      <option name="closed" value="true" />
+      <created>1712394316282</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712394316283</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +501,8 @@
     <MESSAGE value="UML + script" />
     <MESSAGE value="Add javadoc for main class and ScriptParser.java" />
     <MESSAGE value="review 1-3 issues fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="review 1-3 issues fixed" />
+    <MESSAGE value="Save command fix + javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save command fix + javadoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -336,6 +512,10 @@
           <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
